@@ -4,8 +4,9 @@ import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { adminRoutes } from "./routes";
 import Frame from './component/Frame/Index'
+import { isLogined } from "./utils/auth";
 function App() {
-  return (
+  return isLogined() ? (
     <Frame>
       <Switch>
         {adminRoutes.map(route => {
@@ -13,10 +14,10 @@ function App() {
             return <route.component {...routeProps} />
           }} />
         })}
+        <Redirect to={adminRoutes[0].path} from='/admin' />
         <Redirect to='/404' />
       </Switch>
-    </Frame>
-  );
+    </Frame>) : (<Redirect to='/login' />);
 }
 
 export default App;

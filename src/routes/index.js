@@ -1,10 +1,12 @@
 import index from "../pages/admin/dashboard/Index"
-import Login from "../pages/admin/Login"
+import Login from "../pages/admin/login/Login"
 import List from "../pages/admin/demand/List"
 import Edit from "../pages/admin/demand/Edit"
 import PageNotFound from "../pages/PageNotFound"
 import { UserOutlined, LaptopOutlined } from '@ant-design/icons';
 import React from 'react'
+import News from "../pages/admin/news/News"
+import news_Edit from "../pages/admin/news/news_Edit"
 export const mainRoutes = [{
     path:'/login',
     component:Login
@@ -29,5 +31,16 @@ export const adminRoutes = [{
 },{
     path:'/admin/express/edit/:id?',
     component:Edit,
+    isShow:false
+},{
+    path:'/admin/news',
+    component:News,
+    isShow:true,
+    exact:true,
+    title:'资讯管理',
+    icon:<LaptopOutlined/>
+},{
+    path:'/admin/news/edit/:id?',
+    component:news_Edit,
     isShow:false
 }]

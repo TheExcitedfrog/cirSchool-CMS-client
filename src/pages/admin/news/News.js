@@ -6,7 +6,7 @@ const dataSource = [{
     xmmc:'顺丰',
     company_name:'潘凯行'
 }]
-function List(props) {
+function News(props) {
     const columns = [{
         title:'需求代码',
         key:'id',
@@ -52,10 +52,9 @@ function List(props) {
     }]
     return (
         <Card title='需求列表' extra={<Button type='primary' size='small' onClick={()=>{
-            props.history.push('/admin/express/edit')
+            props.history.push('/admin/news/edit')
         }}>新增</Button>}>
             <Table
-                key={columns.title}
                 columns={columns}
                 bordered
                 dataSource={dataSource}
@@ -64,4 +63,4 @@ function List(props) {
     )
 }
 
-export default List
+export default News
