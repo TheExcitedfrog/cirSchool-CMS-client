@@ -14,7 +14,7 @@ function Index(props) {
 
     const popMenu = (
         <Menu onClick={p=>{
-            if(p.key == 'logOut'){
+            if(p.key === 'logOut'){
                 clearToken()
                 props.history.push('/login')
             } else {

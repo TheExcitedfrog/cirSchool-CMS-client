@@ -18,7 +18,6 @@ export default function Login(props) {
         })
     };
 
-
     return (
         <div style={{width:'100%',height:'100%',backgroundImage:'url(http://pic.yupoo.com/kkkxing/532cf2c2/b1b7faef.jpg)',backgroundRepeat:'no-repeat',backgroundSize:'cover'}}>
         <Card title='博思创新管理后台' className='login-form'>

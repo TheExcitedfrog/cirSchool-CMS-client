@@ -18,7 +18,7 @@ export function request(params){
     }).then((res)=>{
             var code = res.status.toString();
             var startChar = code.charAt(0);
-            if(startChar == '2') {
+            if(startChar === '2') {
                 params.sCallback && params.sCallback(res.data);
             } else {
                 params.eCallback && params.eCallback(res.data)

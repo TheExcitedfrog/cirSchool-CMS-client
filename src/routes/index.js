@@ -22,14 +22,14 @@ export const adminRoutes = [{
     title:'看板',
     icon:<UserOutlined/>
 },{
-    path:'/admin/express',
+    path:'/admin/demand',
     component:List,
     isShow:true,
     exact:true,
     title:'需求管理',
     icon:<LaptopOutlined/>
 },{
-    path:'/admin/express/edit/:id?',
+    path:'/admin/demand/edit/:id?',
     component:Edit,
     isShow:false
 },{
